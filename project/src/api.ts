@@ -119,7 +119,7 @@ async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
         : res.status === 429
           ? 'Too many login attempts, please wait 15 minutes'
           : `Request failed (${res.status})`);
-    const errors = data && (data.errors as Record<string, string> | string[] | undefined);
+    const errors = data ? (data.errors as Record<string, string> | string[] | undefined) : undefined;
 
     if (res.status === 401 && !tolerate401 && onUnauthorized) {
       clearToken();

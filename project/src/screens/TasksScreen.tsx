@@ -5,7 +5,7 @@ import { api, ApiRequestError } from '../api';
 import { usePortfolio } from '../usePortfolio';
 import { useToast } from '../components/Toast';
 import { confirm } from '../components/Confirm';
-import { InlineLoader, ErrorState, EmptyState } from '../components/Feedback';
+import { InlineLoader, ErrorState, EmptyState, Spinner } from '../components/Feedback';
 import { TaskFormModal } from '../components/TaskFormModal';
 import {
   taskStatusBadgeClass,

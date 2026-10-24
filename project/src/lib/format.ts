@@ -1,4 +1,4 @@
-import type { ProjectStatus, TaskStatus, TaskPriority, Role } from './types';
+import type { ProjectStatus, TaskStatus, TaskPriority, Role } from '../types';
 
 export function roleLabel(role: Role): string {
   if (role === 'Project_Manager') return 'Project Manager';
