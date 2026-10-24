@@ -8,7 +8,9 @@ import type {
   ApiError,
 } from './types';
 
-export const API_URL = 'https://sevavardhini-backend.onrender.com/api';
+export const API_URL: string =
+  (import.meta.env.VITE_API_URL as string | undefined) ??
+  'https://sevavardhini-backend.onrender.com/api';
 
 const TOKEN_KEY = 'ngo_token';
 const USER_KEY = 'ngo_user';
